@@ -258,4 +258,8 @@ public class ClientController {
         this.send(password);
         return this.receive();
     }
+
+    public String uploadFile(File file) {
+        return FileUploader.uploadFile("http://q2k.tech/api/up/", file);
+    }
 }

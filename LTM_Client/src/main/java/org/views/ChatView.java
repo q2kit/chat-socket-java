@@ -2,7 +2,9 @@ package org.views;
 
 import org.controller.ClientController;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
+import java.io.File;
 import java.util.ArrayList;
 
 public class ChatView extends javax.swing.JFrame {
@@ -93,6 +95,7 @@ public class ChatView extends javax.swing.JFrame {
         javax.swing.JButton addMemberButton = new javax.swing.JButton();
         javax.swing.JButton listMemberButton = new javax.swing.JButton();
         javax.swing.JButton changeRoomInfo = new javax.swing.JButton();
+        javax.swing.JFileChooser jFileChooser = new javax.swing.JFileChooser();
 
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -118,22 +121,35 @@ public class ChatView extends javax.swing.JFrame {
         changeRoomInfo.addActionListener(this::changeRoomInfoActionPerformed);
         jScrollPane1.setViewportView(chatTextArea);
         jScrollPane1.getVerticalScrollBar().addAdjustmentListener(e -> {
-            if (e.getValue() == 0) {
-                int oldHeight = chatTextArea.getSize().height;
-                System.out.println(oldHeight);
-                System.out.println("scroll to top");
-                page++;
-                ArrayList<String> newMessages = this.clientController.getMessages(page, pageSize);
-                this.messages.addAll(0, newMessages);
-                if (newMessages.size() > 0) {
-                    this.messages.addAll(0, newMessages);
-                    this.chatTextArea.setText(String.join("\n", this.messages));
+//            if (e.getValue() == 0) {
+//                int oldHeight = chatTextArea.getSize().height;
+//                System.out.println(oldHeight);
+//                System.out.println("scroll to top");
+//                page++;
+//                ArrayList<String> newMessages = this.clientController.getMessages(page, pageSize);
+//                this.messages.addAll(0, newMessages);
+//                if (newMessages.size() > 0) {
+//                    this.messages.addAll(0, newMessages);
+//                    this.chatTextArea.setText(String.join("\n", this.messages));
+//                }
+//                this.chatTextArea.setCaretPosition(this.chatTextArea.getSize().height - oldHeight);
+//            }
+        });
+        // create a button choose file, post to api, get link, send link to server
+        javax.swing.JButton chooseFileButton = new javax.swing.JButton();
+        chooseFileButton.setText("Choose File");
+        chooseFileButton.addActionListener(e -> {
+            int returnVal = jFileChooser.showOpenDialog(this);
+            if (returnVal == JFileChooser.APPROVE_OPTION) {
+                File file = jFileChooser.getSelectedFile();
+                String link = this.clientController.uploadFile(file);
+                if (link != null) {
+                    link = link.substring(1, link.length() - 1);// remove " in link
+                    this.clientController.sendMessage(link);
                 }
-                // scroll to the old position
-                this.chatTextArea.setCaretPosition(this.chatTextArea.getSize().height - oldHeight);
             }
         });
-        // design layout
+        // create layout
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -141,25 +157,28 @@ public class ChatView extends javax.swing.JFrame {
                         .addGroup(layout.createSequentialGroup()
                                 .addContainerGap()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(layout.createSequentialGroup()
-                                                .addComponent(messageTextField)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(sendButton))
                                         .addComponent(jScrollPane1)
                                         .addGroup(layout.createSequentialGroup()
                                                 .addComponent(roomLabel)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                 .addComponent(userLabel))
                                         .addGroup(layout.createSequentialGroup()
+                                                .addComponent(messageTextField)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(sendButton))
+                                        .addGroup(layout.createSequentialGroup()
                                                 .addComponent(addMemberButton)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(listMemberButton)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(changeRoomInfo)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                 .addComponent(leaveRoomButton)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(logoutButton)))
+                                                .addComponent(logoutButton))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addComponent(chooseFileButton)
+                                                .addGap(0, 0, Short.MAX_VALUE)))
                                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -182,6 +201,8 @@ public class ChatView extends javax.swing.JFrame {
                                         .addComponent(changeRoomInfo)
                                         .addComponent(logoutButton)
                                         .addComponent(leaveRoomButton))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(chooseFileButton)
                                 .addContainerGap())
         );
         pack();

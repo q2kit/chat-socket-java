@@ -35,7 +35,7 @@ public class ClientHandler implements Runnable {
                     case "sendMessage" -> this.sendMessage();
                     case "setRoom" -> this.setRoom();
                     case "getMessages" -> this.getMessages();
-                    case "getUsername" -> this.getUsername();
+                    case "getUsername" -> this.getUsername(); // phụ
                     case "addMember" -> this.addMember();
                     case "getMembers" -> this.getMembers();
                     case "kickMember" -> this.kickMember();
@@ -296,7 +296,7 @@ public class ClientHandler implements Runnable {
             String username = JWT.require(Algorithm.HMAC256("secret")).build().verify(token).getClaim("username").asString();
             Account account = Account.findAccount(username);
             Room room = Room.findRoom(Integer.parseInt(roomID));
-            if (room.checkMember(account) && room.checkOwner(account)) {
+            if (room.checkOwner(account)) {
                 Account memberAccount = Account.findAccount(member);
                 if (room.checkOwner(memberAccount)) {
                     throw new Exception("You can't ban yourself!");
