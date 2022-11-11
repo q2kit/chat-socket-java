@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8b0aba7b-1f74-48c1-8573-30fcb58d2108" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2HBA3Ic7jN9avEkUEPKdSoiPWic" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.main" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.main.Main" />
+      <module name="LTM_Server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8b0aba7b-1f74-48c1-8573-30fcb58d2108" name="Changes" comment="" />
+      <created>1667747905186</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1667747905186</updated>
+      <workItem from="1667747906649" duration="4160000" />
+      <workItem from="1667752095505" duration="4345000" />
+      <workItem from="1667842169582" duration="15942000" />
+      <workItem from="1667882930320" duration="9163000" />
+      <workItem from="1667892997956" duration="795000" />
+      <workItem from="1667893981650" duration="153000" />
+      <workItem from="1667894247343" duration="1319000" />
+      <workItem from="1667895711595" duration="123000" />
+      <workItem from="1667904733931" duration="2809000" />
+      <workItem from="1667915432786" duration="45000" />
+      <workItem from="1667919203658" duration="1160000" />
+      <workItem from="1667986820502" duration="306000" />
+      <workItem from="1667987211744" duration="128000" />
+      <workItem from="1667997084846" duration="2016000" />
+      <workItem from="1668001578455" duration="7791000" />
+      <workItem from="1668010030580" duration="880000" />
+      <workItem from="1668011010031" duration="305000" />
+      <workItem from="1668044590588" duration="7172000" />
+      <workItem from="1668053401143" duration="829000" />
+      <workItem from="1668054372337" duration="262000" />
+      <workItem from="1668054672777" duration="33000" />
+      <workItem from="1668055832317" duration="118000" />
+      <workItem from="1668058456625" duration="1181000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

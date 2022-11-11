@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="db287c76-a0fd-482a-8d49-ea2028008f63" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2HEFgK1L0RfZQXKIzBG7T26aqin" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;OverrideImplement.generate.javadoc&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.views" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.main.Main" />
+      <module name="LTM_Client" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="db287c76-a0fd-482a-8d49-ea2028008f63" name="Changes" comment="" />
+      <created>1667842445579</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1667842445579</updated>
+      <workItem from="1667842446923" duration="226000" />
+      <workItem from="1667843693053" duration="19242000" />
+      <workItem from="1667883001943" duration="9061000" />
+      <workItem from="1667892998317" duration="791000" />
+      <workItem from="1667894249403" duration="1311000" />
+      <workItem from="1667895714248" duration="124000" />
+      <workItem from="1667904765140" duration="2781000" />
+      <workItem from="1667908317903" duration="217000" />
+      <workItem from="1667915425359" duration="50000" />
+      <workItem from="1667919206254" duration="1162000" />
+      <workItem from="1667986820955" duration="312000" />
+      <workItem from="1667987215767" duration="103000" />
+      <workItem from="1667998295261" duration="711000" />
+      <workItem from="1668001126671" duration="8472000" />
+      <workItem from="1668010035992" duration="630000" />
+      <workItem from="1668011110286" duration="202000" />
+      <workItem from="1668044467966" duration="8324000" />
+      <workItem from="1668053577646" duration="646000" />
+      <workItem from="1668054379791" duration="279000" />
+      <workItem from="1668054718614" duration="197000" />
+      <workItem from="1668058789350" duration="813000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
