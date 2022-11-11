@@ -144,8 +144,14 @@ public class ChatView extends javax.swing.JFrame {
                 File file = jFileChooser.getSelectedFile();
                 String link = this.clientController.uploadFile(file);
                 if (link != null) {
-                    link = link.substring(1, link.length() - 1);// remove " in link
-                    this.clientController.sendMessage(link);
+                    if (link.contains("http")) {
+                        link = link.substring(1, link.length() - 1);// remove " in link
+                        this.clientController.sendMessage(link);
+                    } else {
+                        javax.swing.JOptionPane.showMessageDialog(this, link);
+                    }
+                } else {
+                    javax.swing.JOptionPane.showMessageDialog(this, "Something went wrong");
                 }
             }
         });
