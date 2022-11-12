@@ -145,7 +145,6 @@ public class ChatView extends javax.swing.JFrame {
                 String link = this.clientController.uploadFile(file);
                 if (link != null) {
                     if (link.contains("http")) {
-                        link = link.substring(1, link.length() - 1);// remove " in link
                         this.clientController.sendMessage(link);
                     } else {
                         javax.swing.JOptionPane.showMessageDialog(this, link);
