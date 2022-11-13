@@ -1,26 +1,21 @@
 package org.controller;
 
-import okhttp3.*;
-
-import java.io.File;
-import java.net.*;
+import java.io.*;
 
 public class FileUploader {
     public static String uploadFile(String url, File file) {
         try {
-            OkHttpClient client = new OkHttpClient().newBuilder().build();
-            RequestBody body = new MultipartBody.Builder().setType(MultipartBody.FORM)
-                    .addFormDataPart("file", file.getName(),
-                            RequestBody.create(MediaType.parse("application/octet-stream"),
-                                    file))
-                    .build();
-            Request request = new Request.Builder()
-                    .url(url)
-                    .method("POST", body)
-                    .addHeader("Content-Type", "text/plain")
-                    .build();
-            Response response = client.newCall(request).execute();
-            return response.body().string();
+            String command = "curl -F \"file=@" + file.getAbsolutePath() + "\" " + url;
+            ProcessBuilder processBuilder = new ProcessBuilder();
+            processBuilder.command("cmd.exe", "/c", command);
+            Process process = processBuilder.start();
+            BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+            String line;
+            while ((line = reader.readLine()) != null) {
+                return line;
+            }
+            process.waitFor();
+            return null;
         } catch (Exception e) {
             System.out.println(e.getMessage());
             return null;
