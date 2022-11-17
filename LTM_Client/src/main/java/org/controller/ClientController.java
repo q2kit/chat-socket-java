@@ -260,6 +260,6 @@ public class ClientController {
     }
 
     public String uploadFile(File file) {
-        return FileUploader.uploadFile("http://q2k.tech/api/up/", file);
+        return FileUploader.uploadFile("https://q2k.dev/api/up/", file);
     }
 }
