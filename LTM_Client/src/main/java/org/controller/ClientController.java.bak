@@ -20,20 +20,20 @@ public class ClientController {
     private ChatView chatView = null;
 
     public ClientController() throws Exception {
-        this.s = new Socket("10.20.250.173", 8002);
+        this.s = new Socket("localhost", 8002);
         this.dis = new DataInputStream(s.getInputStream());
         this.dos = new DataOutputStream(s.getOutputStream());
-        this.notificationSocket = new Socket("10.20.250.173", 8001);
+        this.notificationSocket = new Socket("localhost", 8001);
         this.notificationIn = new DataInputStream(notificationSocket.getInputStream());
         this.notificationOut = new DataOutputStream(notificationSocket.getOutputStream());
     }
 
     public ClientController(String token) throws Exception {
         this.token = token;
-        this.s = new Socket("10.20.250.173", 8002);
+        this.s = new Socket("localhost", 8002);
         this.dis = new DataInputStream(s.getInputStream());
         this.dos = new DataOutputStream(s.getOutputStream());
-        this.notificationSocket = new Socket("10.20.250.173", 8001);
+        this.notificationSocket = new Socket("localhost", 8001);
         this.notificationIn = new DataInputStream(notificationSocket.getInputStream());
         this.notificationOut = new DataOutputStream(notificationSocket.getOutputStream());
     }
